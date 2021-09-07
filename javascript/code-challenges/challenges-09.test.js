@@ -10,11 +10,9 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
-  let max = arr.reduce((acc, val) => {
-    acc[0] = acc[0] === undefined || val < acc[0] ? val : acc[0];
-    acc[1] = acc[1] === undefined || val > acc[1] ? val : acc[1];
-    return acc;
-  }, []);
+  var max = arr.reduce(function (a, b) {
+    return Math.max(a, b);
+  });
   return max;
 };
 
@@ -59,8 +57,9 @@ Write a function named checkValues that takes in an object and a value and retur
 const checkValues = (obj, value) => {
   // Solution code here...
   var x = false;
-  Object.values(obj).forEach((value) => {
-    if (Object.values(obj) === value) {
+
+  Object.values(obj).forEach((element) => {
+    if (element === value) {
       x = !x;
     }
   });
@@ -90,10 +89,10 @@ const updateNumbers = (obj) => {
   // Solution code here...
 
   var newArray = [];
-  Object.keys(obj).map(function(key) {
+  Object.keys(obj).map(function (key) {
     newArray.push(`${key}: ${obj[key]}`);
   });
-  return(newArray);
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -148,9 +147,9 @@ const characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
-  Object.keys(arr).forEach( property => {
+  Object.keys(arr).forEach((property) => {
     houses.push(arr[property].house);
-  })
+  });
   return houses;
 };
 
@@ -165,11 +164,18 @@ For example:
 hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
-
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
+  var stat;
+  const found = arr.find((element) => element.name === character);
+  console.log(found);
+  if (!("children" in found)) {
+    stat = false;
+  } else if ("children" in found) {
+    stat = true;
+  }
+  return stat;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
