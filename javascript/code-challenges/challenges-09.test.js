@@ -90,10 +90,10 @@ const updateNumbers = (obj) => {
   // Solution code here...
 
   var newArray = [];
-  Object.keys(obj).map(function (key) {
+  Object.keys(obj).map(function(key) {
     newArray.push(`${key}: ${obj[key]}`);
   });
-  return newArray;
+  return(newArray);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -148,9 +148,9 @@ const characters = [
 const getHouses = (arr) => {
   let houses = [];
   // Solution code here...
-  Object.keys(arr).forEach((property) => {
+  Object.keys(arr).forEach( property => {
     houses.push(arr[property].house);
-  });
+  })
   return houses;
 };
 
@@ -168,8 +168,6 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-  let state = arr.hasOwnProperty(children);
-  return state;
 };
 
 /* ------------------------------------------------------------------------------------------------
