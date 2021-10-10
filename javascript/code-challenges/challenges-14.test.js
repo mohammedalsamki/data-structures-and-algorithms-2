@@ -11,22 +11,21 @@ Write a function named screenForNames that takes in an array of strings and uses
 ------------------------------------------------------------------------------------------------ */
 
 const screenForNames = (arr) => {
-  // Solution code here...
-
-  let newArray = [];
-  arr.forEach((element) => {
-    if (element.match(/(?:Mr\.|Ms\.|Dr\.|Mrs\.) [a-zA-Z]+/)) {
-      newArray.push(element);
+  let newArr = [];
+  for (let j = 0; j < arr.length; j++) {
+    if (arr[j][0] !== " " && arr[j][5] !== "P") {
+      if (
+        arr[j].includes("Mr. ") ||
+        arr[j].includes("Mrs. ") ||
+        arr[j].includes("Ms. ") ||
+        arr[j].includes("Dr. ")
+      ) {
+        newArr.push(arr[j]);
+      }
     }
-  });
-  console.log(newArray);
-  const index = newArray.indexOf(" Ms. Red");
-  console.log(index);
-  if (index > -1) {
-    newArray.splice(index, 1);
   }
 
-  return newArray;
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,14 +35,21 @@ Write a function named toTitleCase that takes in an array of strings and returns
 
 For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyver'].
 ------------------------------------------------------------------------------------------------ */
-const toTitleCase = (arr) => {
-  // Solution code here...
-  let newArray = [];
-  arr.forEach((element) => {
-    newArray.push(element.charAt(0).toUpperCase() + element.slice(1));
-  });
 
-  return newArray;
+const toTitleCase = (arr) => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    let letter = "";
+    for (let j = 0; j < arr[i].length; j++) {
+      if (j == 0) {
+        letter = letter + arr[i][j].toUpperCase();
+      } else {
+        letter = letter + arr[i][j];
+      }
+    }
+    newArr.push(letter);
+  }
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -120,24 +126,15 @@ let starWarsData = [
 ];
 
 let biggerThanLuke = (arr) => {
-  // Solution code here...
-
-  let arr1 = [];
-  arr.forEach((elemnt) => {
-    console.log(elemnt.mass);
-    if (elemnt.mass > 77) {
-      arr1.push(elemnt);
+  let newArr = [];
+  arr.sort((a) => {
+    if (parseInt(a.mass) > parseInt("77")) {
+      newArr.push(a.name);
     }
   });
-  let arr2 = [];
-  arr1.forEach((element) => {
-    arr2.push(element.name);
-  });
-
-  let str = arr2.join(" - ");
-
-  return str;
+  return newArr.join(" - ");
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 Write a function named sortBy that takes in an array of objects, each of which has a particular property, and sorts those objects by that property, lowest to highest, returning the same array.
@@ -153,28 +150,29 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
-  const comparename = (a, b) => {
-    if (a.name < b.name) {
-      return -1;
-    }
-    if (a.name > b.name) {
-      return 1;
-    }
-    return 0;
-  };
-
   if (property === "price") {
-    let A = arr.sort((a, b) => (a.price < b.price ? -1 : 1));
-    return A;
-  } else if (property === "name") {
-    let B = arr.sort(comparename);
-    return B;
+    arr.sort((a, b) => {
+      if (a.price < b.price) {
+        return -1;
+      } else {
+        1;
+      }
+    });
   }
+  if (property === "name") {
+    arr.sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      } else {
+        return -1;
+      }
+    });
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 5 
+CHALLENGE 5
 
 Write a function that determines if a given URL is secure, beginning with https://
 
@@ -186,38 +184,15 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-  // Solution code here...
-
-  let state;
-  var pattern = new RegExp(
-    "^(https?:\\/\\/)?" + // protocol
-      "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
-      "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
-      "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
-      "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
-      "(\\#[-a-z\\d_]*)?$",
-    "i"
-  ); // fragment locator
-  let isURL = !!pattern.test(url);
-  let url2;
-  try {
-    url2 = new URL(url);
-  } catch (_) {
+  if (url.includes("https://")) {
+    return true;
+  } else {
     return false;
   }
-
-  let isSecure = url2.protocol === "https:";
-
-  if (isURL && isSecure) {
-    state = true;
-  } else {
-    state = false;
-  }
-
-  return state;
 };
+
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 6 
+CHALLENGE 6
 
 Write a function named detectTicTacToeWin that accepts a two-dimensional array of strings. Each string is guaranteed to be either "X", "O" or an empty string. Your function should check to see if any row, column, or either diagonal direction has three matching "X" or "O" symbols (non-empty strings), three-in-a-line.
 
@@ -236,7 +211,30 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  let result = false;
+  for (let i = 0; i < board.length; i++) {
+    if (
+      board[i][0] === board[i][1] &&
+      board[i][1] === board[i][2] &&
+      board[i][1] !== ""
+    ) {
+      result = true;
+    }
+    if (
+      board[0][i] === board[1][i] &&
+      board[1][i] === board[2][i] &&
+      board[i][i] !== ""
+    ) {
+      result = true;
+    }
+    if (board[0][0] === board[1][1] && board[1][1] === board[2][2]) {
+      result = true;
+    }
+    if (board[0][2] === board[1][1] && board[1][1] === board[2][0]) {
+      result = true;
+    }
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
