@@ -14,10 +14,16 @@ If you have not already done so, run `npm install` from within this folder to se
 
 To run your tests
 
-- Change to the `javascript` folder
-- run `npm test` to run all of the tests
-- run `npm test ##` to only run tests for challenge ## (i.e. 01)
+* Change to the `javascript` folder
+* run `npm test` to run all of the tests
+* run `npm test ##` to only run tests for challenge ## (i.e. 01)
 
 ### 401 Data Structures, Code Challenges
 
-- Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+* Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
+
+# Table of Contents
+
+| Class Number       | Class Title     |
+| :----------------  | :---------------- |
+| 1.  | [Array](python/linked_list/README.md)  |
