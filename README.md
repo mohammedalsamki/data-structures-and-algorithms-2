@@ -26,4 +26,4 @@ To run your tests
 
 | Class Number       | Class Title     |
 | :----------------  | :---------------- |
-| 1.  | [Array](python/array/README.md)  |
+| 1.  | [Array](python/linked_list/README.md)  |
