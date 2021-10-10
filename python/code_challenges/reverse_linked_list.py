@@ -6,4 +6,8 @@ def reverse_list(ll):
         linked list in reversed form
     """
     # put your function implementation here
-    return ll
+    if(len(array) != 0):
+        ll = array[::-1]
+        return ll
+    else:
+        return print("The Array Is empty")
