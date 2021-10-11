@@ -1,12 +1,18 @@
 class LinkedList:
     """
-    Put docstring here
+    Function to reverse array element
     """
 
     def __init__(self):
         # initialization here
         pass
 
-    def some_method(self):
+    def reverseArray(array: int):
         # method body here
-        pass
+        if(len(array) != 0):
+            res = array[::-1]
+            return res
+        else:
+            return print("The Array Is empty")
+
+

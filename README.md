@@ -22,6 +22,9 @@ To run your tests
 
 * Please follow the instructions specific to your 401 language, which can be found in the directory below, matching your course.
 
-## Table of Content
+# Table of Contents
 
-| 1.  | [Array Insert Shift README File](array-insert-shift/README.md)  |
+| Class Number       | Class Title     |
+| :----------------  | :---------------- |
+| 1.  | [Array](python/linked_list/README.md)  |
+| 2.  | [Array Insert Shift README File](array-insert-shift/README.md)  |
