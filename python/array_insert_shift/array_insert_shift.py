@@ -19,19 +19,19 @@ def insertShiftArray(array, n):
         print("Please enter a postive integer")
     else:
         array += [n]
-        # This part commented for testing reasons after the test pass you can uncomment it
-        # while finished is False:
-        #     state = input(
-        #         f"Your new Array is {array} with value added to it Do you want to add more values.. Enter yes or no please  \n> ")
-        #     if state == 'no':
-        #         finished = True
-        #     elif state == 'yes':
-        #         value = int(input(
-        #             f"Add your value.. ? \n> "))
-        #         array += [value]
-        #         finished = False
-        #     print("Array", array)
         return array
+    while finished is False:
+        state = input(
+            f"Your new Array is {array} with value added to it Do you want to add more values.. Enter yes or no please  \n> ")
+        if state == 'no':
+            finished = True
+        elif state == 'yes':
+            value = int(input(
+                f"Add your value.. ? \n> "))
+            array += [value]
+            finished = False
+        print("Array", array)
+
 
 
 if __name__ == "__main__":
