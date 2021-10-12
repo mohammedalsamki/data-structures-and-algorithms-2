@@ -15,6 +15,6 @@ return the index of the array’s element that is equal to the value of the sear
 ## Approach & Efficiency
 
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
-Using ‘+’ operator will make our algorithm simple and fast insted of using itteration
-or recarsive algorithms but the while loop addition is optional for interactive CLI
-which still linear addition to our algorithm
+
+    the while loop will be termneated when the lower index become higher index
+    and this will casue number of operation depending on the location of the target element and the list length so it's linear O(n) notation.
