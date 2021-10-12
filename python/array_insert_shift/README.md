@@ -8,7 +8,7 @@ It's a python function project takes in an array and a value to be added.
 
 <!-- Embedded whiteboard image -->
 
-![insertShiftArray](python/array_insert_shift/insertShiftArray.jpg)
+![insertShiftArray](/python/array_insert_shift/insertShiftArray.jpg)
 
 ## Approach & Efficiency
 
