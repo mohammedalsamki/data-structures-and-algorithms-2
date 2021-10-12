@@ -26,4 +26,4 @@ To run your tests
 | Class Number       | Class Title     |
 | :----------------  | :---------------- |
 | 1.  | [Array](python/linked_list/README.md)  |
-| 2.  | [Array Insert Shift README File](array_insert_shift/README.md)  |
+| 2.  | [Array Insert Shift README File](python/array_insert_shift/README.md)  |
