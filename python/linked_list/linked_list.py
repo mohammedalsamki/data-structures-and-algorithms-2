@@ -4,10 +4,6 @@ from typing import Text
 class Node:
     """
     Class for Node implementation with fields for value and pointer
-
-    Fileds :
-        None
-
     Behaviours :
      __init__(data, next_):
         The constructor method for the class,
@@ -27,32 +23,42 @@ class LinkedList:
     """
     A class for creating instances of a Linked List.
 
-    Fileds :
-        No fields
+    """
 
-    Behaviours :
+    def __init__(self):
+        """
         __init__(self):
         The constructor method for the class,
         Arguments :
             self : its the instance we create
         Return :
             None
+
+        """
+        self.head = None
+
+    def add(self, value):
+        """
         add(self,value):
-        The Add method for the class,
+        The Add method for the class for adding elmenent to likedlist,
         Arguments :
             value : data entered at any type
         Return :
             None
-    """
-
-    def __init__(self):
-        self.head = None
-
-    def add(self, value):
+        """
         new_node = Node(value, self.head)
         self.head = new_node
 
     def contain(self, value):
+        """
+        contain(self,value):
+        The Contain method for checking if element in linked list,
+        Arguments :
+            value : data entered at any type
+        Return :
+            True if element existed
+            False if elment is not existed
+        """
         while self.head is not None:
             if self.head.value == value:
                 return True
@@ -61,11 +67,20 @@ class LinkedList:
         return False
 
     def display(self):
-        text=[]
+        """
+        def display(self):
+        The Display method for Displaying elements in the linked list,
+        Arguments :
+            slef : the instance we create
+        Return :
+            text : Link list
+        """
+        text = []
         node = self.head
         while node:
-            text+=[str(node.value)]
+            text += [str(node.value)]
             node = node._next
+        print(text)
         return text
 
 
@@ -75,4 +90,4 @@ if __name__ == "__main__":
     ll.add(1)
     ll.add(2)
     ll.add(3)
-    print(ll.display())
+    ll.display()

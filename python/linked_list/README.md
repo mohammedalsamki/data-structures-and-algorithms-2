@@ -13,7 +13,7 @@ using Node Class
 
 - [x] Create a Linked List class
 - [x] Within your Linked List class, include a head property.
-- [] The class should contain the following methods
+- [x] The class should contain the following methods
 
     - [x] insert
     - [x] includes
