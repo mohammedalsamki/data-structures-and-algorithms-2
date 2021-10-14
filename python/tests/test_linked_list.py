@@ -80,3 +80,16 @@ def test_linked_list_contatin():
     # Assert
 
     assert expected == actual
+
+def test_linked_display():
+    # Arrange
+    expected = ['2','1']
+    # Actual
+    ll = LinkedList()
+    ll.add(1)
+    ll.add(2)
+    actual = ll.display()
+
+    # Assert
+
+    assert expected == actual

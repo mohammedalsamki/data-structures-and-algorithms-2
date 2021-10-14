@@ -1,3 +1,6 @@
+from typing import Text
+
+
 class Node:
     """
     Class for Node implementation with fields for value and pointer
@@ -20,7 +23,7 @@ class Node:
         self._next = _next
 
 
-class LinkedList(Node):
+class LinkedList:
     """
     A class for creating instances of a Linked List.
 
@@ -28,13 +31,13 @@ class LinkedList(Node):
         No fields
 
     Behaviours :
-     __init__(self):
+        __init__(self):
         The constructor method for the class,
         Arguments :
             self : its the instance we create
         Return :
             None
-     add(self,value):
+        add(self,value):
         The Add method for the class,
         Arguments :
             value : data entered at any type
@@ -46,7 +49,8 @@ class LinkedList(Node):
         self.head = None
 
     def add(self, value):
-        self.head = Node(value, self.head)
+        new_node = Node(value, self.head)
+        self.head = new_node
 
     def contain(self, value):
         while self.head is not None:
@@ -56,3 +60,19 @@ class LinkedList(Node):
 
         return False
 
+    def display(self):
+        text=[]
+        node = self.head
+        while node:
+            text+=[str(node.value)]
+            node = node._next
+        return text
+
+
+if __name__ == "__main__":
+
+    ll = LinkedList()
+    ll.add(1)
+    ll.add(2)
+    ll.add(3)
+    print(ll.display())
