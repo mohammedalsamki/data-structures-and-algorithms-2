@@ -31,7 +31,7 @@ class LinkedList(Node):
      __init__(self):
         The constructor method for the class,
         Arguments :
-            self : its the instance we create   
+            self : its the instance we create
         Return :
             None
      add(self,value):
@@ -44,3 +44,15 @@ class LinkedList(Node):
 
     def __init__(self):
         self.head = None
+
+    def add(self, value):
+        self.head = Node(value, self.head)
+
+    def contain(self, value):
+        while self.head is not None:
+            if self.head.value == value:
+                return True
+            self.head = self.head._next
+
+        return False
+
