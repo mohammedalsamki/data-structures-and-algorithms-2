@@ -11,12 +11,13 @@ using Node Class
 
 ## Linked List
 
--[] Create a Linked List class
--[] Within your Linked List class, include a head property.
--[] The class should contain the following methods
--[] insert
--[] includes
--[] to string
+- [x] Create a Linked List class
+- [x] Within your Linked List class, include a head property.
+- [] The class should contain the following methods
+
+    - [] insert
+    - [] includes
+    - [] to string
 
 ## Test Requirements
 
