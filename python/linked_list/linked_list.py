@@ -82,11 +82,53 @@ class LinkedList:
                 output = output + '{ ' + value + ' } -> '
         return output
 
+    def add_appnd(self,data):
+
+        new_node = Node(data)
+
+        if self.head is None:
+            self.head = new_node
+        else:
+            n = self.head
+            while n._next is not None:
+                n = n._next
+            n._next = new_node
+
+    def insert_before(self, value, new_value):
+        """
+        Adds a new node with new value before the first node which has the value specified.
+        """
+        pointer = self.head
+        if pointer.value == value:
+            self.insert(new_value)
+        else:
+            while pointer:
+                if pointer._next.value == value:
+                    next_value = pointer._next
+                    pointer._next = Node(new_value)
+                    pointer._next._next = next_value
+                    break
+                pointer = pointer._next
+
+    def insert_after(self, value, new_value):
+        """
+        Adds a new node with new value passed after the first node which has the value specified.
+        """
+        pointer = self.head
+        while pointer:
+            if pointer.value == value:
+                next_value = pointer._next
+                pointer._next = Node(new_value)
+                pointer._next._next = next_value
+                break
+            pointer = pointer._next
 
 if __name__ == "__main__":
 
     ll = LinkedList()
-    ll.add(1)
-    ll.add(2)
-    ll.add(3)
-    ll.display()
+    ll.add_end(1)
+    ll.add_end(3)
+    ll.add_end(2)
+    ll.add_end(5)
+    print(ll.__str__())
+

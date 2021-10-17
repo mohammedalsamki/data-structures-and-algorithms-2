@@ -59,11 +59,12 @@ def test_node_has_str_data():
 
 def test_linked_list_add():
     # Arrange
-    expected = None
+    expected = 2
     # Actual
     ll = LinkedList()
     actual = ll.add(1)
-    actual = ll.add(12)
+    actual = ll.add(2)
+    actual = ll.head.value
     # Assert
     assert expected == actual
 
@@ -94,3 +95,104 @@ def test_linked_str():
     # Assert
 
     assert expected == actual
+
+
+def test_linked_list_add_appnd():
+    # Arrange
+    expected = 2
+    # Actual
+    ll = LinkedList()
+    ll.add_appnd(2)
+    actual = ll.head.value
+    # Assert
+    assert expected == actual
+
+
+def test_insert_node():
+    # Arrange
+    expected = '{ 1 } -> { 2 } -> { 3 } -> None'
+    # Actual
+    ll = LinkedList()
+    ll.add_appnd(3)
+    ll.add(2)
+    ll.add(1)
+
+    actual = ll.__str__()
+    print(actual)
+    # Assert
+    assert actual == expected
+
+
+def test_insert_multiple_nodes():
+    # Arrange
+    expected = '{ 1 } -> { 2 } -> { 7 } -> { 9 } -> { 11 } -> None'
+    # Actual
+    ll = LinkedList()
+    ll.add_appnd(9)
+    ll.add_appnd(11)
+    ll.add(7)
+    ll.add(2)
+    ll.add(1)
+    actual = ll.__str__()
+
+    # Assert
+    assert actual == expected
+
+def test_insert_node_before_middle():
+    # Arrange
+    expected = '{ 1 } -> { 4 } -> { 2 } -> { 3 } -> None'
+    # Actual
+    ll = LinkedList()
+    ll.add_appnd(1)
+    ll.add_appnd(2)
+    ll.add_appnd(3)
+    ll.insert_before(2, 4)
+    actual = ll.__str__()
+
+    # Assert
+    assert actual == expected
+
+
+def test_insert_node_before_head():
+    # Arrange
+    expected = '{ 4 } -> { 3 } -> { 2 } -> { 1 } -> None'
+    # Actual
+    ll = LinkedList()
+    ll.add_appnd(4)
+    ll.add_appnd(3)
+    ll.add_appnd(1)
+    ll.insert_before(1, 2)
+    actual = ll.__str__()
+
+    # Assert
+    assert actual == expected
+
+
+def test_insert_node_after_middle():
+    # Arrange
+    expected = '{ 1 } -> { 2 } -> { 3 } -> { 4 } -> None'
+    # Actual
+    ll = LinkedList()
+    ll.add_appnd(1)
+    ll.add_appnd(2)
+    ll.add_appnd(4)
+    ll.insert_after(2, 3)
+    actual = ll.__str__()
+    print(actual)
+    # Assert
+    assert actual == expected
+
+
+def test_insert_node_after_end():
+    # Arrange
+    expected = '{ 1 } -> { 2 } -> { 3 } -> { 4 } -> None'
+    # Actual
+    ll = LinkedList()
+    ll.add_appnd(1)
+    ll.add_appnd(2)
+    ll.add_appnd(3)
+    ll.insert_after(3, 4)
+    actual = ll.__str__()
+    print(actual)
+    # Assert
+    assert actual == expected

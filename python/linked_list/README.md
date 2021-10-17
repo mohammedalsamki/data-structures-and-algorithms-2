@@ -18,6 +18,10 @@ using Node Class
     - [x] insert
     - [x] includes
     - [x] to string
+    - [] append
+    - [] insert before
+    - [] insert after
+
 
 ## Test Requirements
 
