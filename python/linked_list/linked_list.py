@@ -66,22 +66,21 @@ class LinkedList:
 
         return False
 
-    def display(self):
+    def __str__(self):
         """
-        def display(self):
-        The Display method for Displaying elements in the linked list,
-        Arguments :
-            slef : the instance we create
-        Return :
-            text : Link list
+        Loop over all the nodes and print all the values in one line
         """
-        text = []
+        output = ""
         node = self.head
         while node:
-            text += [str(node.value)]
-            node = node._next
-        print(text)
-        return text
+            value = str(node.value)
+            if node._next == None:
+                output = output + '{ ' + value + ' } -> None'
+                break
+            else:
+                node = node._next
+                output = output + '{ ' + value + ' } -> '
+        return output
 
 
 if __name__ == "__main__":

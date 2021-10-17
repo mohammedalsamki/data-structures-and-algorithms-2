@@ -81,14 +81,15 @@ def test_linked_list_contatin():
 
     assert expected == actual
 
-def test_linked_display():
+def test_linked_str():
     # Arrange
-    expected = ['2','1']
+    expected = '{ 3 } -> { 2 } -> { 1 } -> None'
     # Actual
     ll = LinkedList()
     ll.add(1)
     ll.add(2)
-    actual = ll.display()
+    ll.add(3)
+    actual = str(ll)
 
     # Assert
 
