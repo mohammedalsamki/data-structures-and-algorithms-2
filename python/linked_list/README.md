@@ -18,9 +18,9 @@ using Node Class
     - [x] insert
     - [x] includes
     - [x] to string
-    - [] append
-    - [] insert before
-    - [] insert after
+    - [x] append
+    - [x] insert before
+    - [x] insert after
 
 
 ## Test Requirements
