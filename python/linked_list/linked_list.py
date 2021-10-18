@@ -67,40 +67,39 @@ class LinkedList:
         return False
 
     def __str__(self):
-        """
-        Loop over all the nodes and print all the values in one line
-        """
         output = ""
-        node = self.head
-        while node:
-            value = str(node.value)
-            if node._next == None:
-                output = output + '{ ' + value + ' } -> None'
-                break
+        pointer = self.head
+        while pointer:
+            if pointer._next is None:
+                output +=  "{ " + f"{str(pointer.value)}" + " }" + " -> None"
+
+
             else:
-                node = node._next
-                output = output + '{ ' + value + ' } -> '
+                output +=  "{ " + f"{str(pointer.value)}" + " }" + " -> "
+            pointer = pointer._next
         return output
 
-    def add_appnd(self,data):
-
-        new_node = Node(data)
-
-        if self.head is None:
-            self.head = new_node
+    def append(self, value='None'):
+        """
+        Add a node to the end of the linked list
+        """
+        node = Node(value)
+        if not self.head:
+            self.head = node
         else:
-            n = self.head
-            while n._next is not None:
-                n = n._next
-            n._next = new_node
+            pointer = self.head
+            while pointer._next is not None:
+                pointer = pointer._next
+            pointer._next = node
 
     def insert_before(self, value, new_value):
         """
-        Adds a new node with new value before the first node which has the value specified.
+        adds a new node with the given new value immediately before the first node that has the value specified.
         """
         pointer = self.head
         if pointer.value == value:
-            self.insert(new_value)
+            self._next = pointer
+            self.head=new_value
         else:
             while pointer:
                 if pointer._next.value == value:
@@ -123,6 +122,7 @@ class LinkedList:
                 break
             pointer = pointer._next
 
+
 if __name__ == "__main__":
 
     ll = LinkedList()
@@ -131,4 +131,3 @@ if __name__ == "__main__":
     ll.add_end(2)
     ll.add_end(5)
     print(ll.__str__())
-
