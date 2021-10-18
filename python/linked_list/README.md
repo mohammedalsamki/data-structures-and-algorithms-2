@@ -2,19 +2,29 @@
 
 <!-- Description of the challenge -->
 
-The challange is about creating a function accept an array of integers as argument
-and returning new array with reversed elements
-
-## Whiteboard Process
-
-<!-- Embedded whiteboard image -->
-
-![array-reverse](whiteboard.jpg)
+Singly Linked Lists Application for implement the Linked list in python
+using Node Class
 
 ## Approach & Efficiency
 
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
 
-I think that the effecincy of slicing is about O(n) grade while the n is the size of
-observaition that pass to algorthim which is better than using nested for loop that will
-not be efficent like slicing
+## Linked List
+
+- [x] Create a Linked List class
+- [x] Within your Linked List class, include a head property.
+- [x] The class should contain the following methods
+
+    - [x] insert
+    - [x] includes
+    - [x] to string
+
+## Test Requirements
+
+* [x] Can successfully instantiate an empty linked list
+* [x] Can properly insert into the linked list
+The head property will properly point to the first node in the linked list
+* [x] Can properly insert multiple nodes into the linked list
+* [x] Will return true when finding a value within the linked list that exists
+* [x] Will return false when searching for a value in the linked list that does not exist
+* [x] Can properly return a collection of all the values that exist in the linked list
