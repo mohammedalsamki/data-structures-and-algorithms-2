@@ -24,9 +24,6 @@ On this, and all future challenges, write tests for any cases that help you ensu
 * [x] Check linked list is  zipped after add to Linked List
 * [x] Check linked list zipped after append to Linked List
 * [x] Check if linked list zipped with insert after a value of List
-
 # White Board
 
-![first](1.png)
-
-![second](2.png)
+![Zip](Zip_Lists.jpg)
