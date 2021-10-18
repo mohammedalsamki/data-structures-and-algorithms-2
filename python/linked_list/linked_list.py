@@ -71,11 +71,10 @@ class LinkedList:
         pointer = self.head
         while pointer:
             if pointer._next is None:
-                output +=  "{ " + f"{str(pointer.value)}" + " }" + " -> None"
-
+                output += "{ " + f"{str(pointer.value)}" + " }" + " -> None"
 
             else:
-                output +=  "{ " + f"{str(pointer.value)}" + " }" + " -> "
+                output += "{ " + f"{str(pointer.value)}" + " }" + " -> "
             pointer = pointer._next
         return output
 
@@ -99,7 +98,7 @@ class LinkedList:
         pointer = self.head
         if pointer.value == value:
             self._next = pointer
-            self.head=new_value
+            self.head = new_value
         else:
             while pointer:
                 if pointer._next.value == value:
@@ -121,6 +120,14 @@ class LinkedList:
                 pointer._next._next = next_value
                 break
             pointer = pointer._next
+
+    def export_as_List(self):
+        array = []
+        currentNode = self.head
+        while(currentNode is not None):
+            array[:0] = [currentNode.value]
+            currentNode = currentNode._next
+        return array
 
 
 if __name__ == "__main__":
