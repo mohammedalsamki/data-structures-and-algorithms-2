@@ -1,4 +1,4 @@
-# Reverse an Array
+# Linked List
 
 <!-- Description of the challenge -->
 
