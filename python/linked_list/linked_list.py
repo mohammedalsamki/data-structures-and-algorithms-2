@@ -122,6 +122,10 @@ class LinkedList:
             pointer = pointer._next
 
     def export_as_List(self):
+        """
+        this function export the singly list as list
+        to be zipped
+        """
         array = []
         currentNode = self.head
         while(currentNode is not None):
@@ -129,12 +133,40 @@ class LinkedList:
             currentNode = currentNode._next
         return array
 
+    def get_k_th(self, k):
+        """
+        this function return the kth value of list
+
+        Arg:
+        k : The nth of the list we need to return and it k is positive integer less
+        than the length of linked list
+
+        Return:
+        value at kth of linked list
+        """
+        pointer = self.head
+        count = 0
+        while (pointer):
+            if (count == k):
+                return pointer.value
+            count += 1
+            pointer = pointer._next
+        if k == count:
+            return "The Length of array and the k you passed are same"
+        elif k > count:
+            return "You are not allowed to enter a number is greater than length of list"
+        elif k < 0:
+            return "You are not allowed to enter negative number"
+        else:
+            return 0
+
 
 if __name__ == "__main__":
 
     ll = LinkedList()
-    ll.add_end(1)
-    ll.add_end(3)
-    ll.add_end(2)
-    ll.add_end(5)
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+
+    print(ll.getNth(2))
     print(ll.__str__())

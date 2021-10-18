@@ -21,6 +21,7 @@ using Node Class
     - [x] append
     - [x] insert before
     - [x] insert after
+    - [x] get the k-th
 
 ## Test Requirements
 
@@ -35,4 +36,10 @@ The head property will properly point to the first node in the linked list
 
 ![first](1.png)
 
+</br>
+
 ![second](2.png)
+
+</br>
+
+![third](3.png)
