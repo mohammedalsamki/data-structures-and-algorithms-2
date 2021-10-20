@@ -35,8 +35,8 @@ def zip_list(Linked_List_1,Linked_List_2):
                 temp = ll_2._next
                 ll_2._next=ll_1
                 ll_2=temp
-
-        return str(Linked_List_1)
+        result=f'head -> {str(Linked_List_1)}'
+        return result
 
 if __name__=="__main__":
 
