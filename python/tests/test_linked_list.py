@@ -188,3 +188,87 @@ def test_insert_node_after_end():
     print(actual)
     # Assert
     assert actual == expected
+
+# @pytest.mark.skip()
+def test_get_k_th():
+    # Arrange
+    expected = 3
+    # Actual
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    actual = ll.get_k_th(2)
+    print(actual)
+    # Assert
+    assert actual == expected
+
+def test_get_k_th_if_number_passed_greater_than_length_of_list():
+    # Arrange
+    expected = "You are not allowed to enter a number is greater than length of list"
+    # Actual
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    actual = ll.get_k_th(5)
+    print(actual)
+    # Assert
+    assert actual == expected
+
+
+def test_get_k_th_if_number_passed_is_negative():
+    # Arrange
+    expected = "You are not allowed to enter negative number"
+    # Actual
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    actual = ll.get_k_th(-1)
+    print(actual)
+    # Assert
+    assert actual == expected
+
+def test_get_k_th_if_list_length_is_unity():
+    # Arrange
+    expected = 1
+    # Actual
+    ll = LinkedList()
+    ll.append(1)
+    actual = ll.get_k_th(0)
+    print(actual)
+    # Assert
+    assert actual == expected
+def test_get_k_th_if_list_in_the_middle():
+    # Arrange
+    # '{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> None' expected
+    expected = 3
+    # Actual
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(4)
+    ll.append(5)
+    ll.insert_before(4, 3)
+    actual = ll.get_k_th(2)
+
+    # Assert
+    assert actual == expected
+
+def test_get_k_if_the_k_and_length_are_same():
+    # Arrange
+    # expected '{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> None'
+    expected = "The Length of array and the k you passed are same"
+    # Actual
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(4)
+    ll.append(5)
+    ll.insert_before(4, 3)
+    actual = ll.get_k_th(5)
+
+    # Assert
+    assert actual == expected
+
