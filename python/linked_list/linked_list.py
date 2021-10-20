@@ -67,26 +67,106 @@ class LinkedList:
         return False
 
     def __str__(self):
-        """
-        Loop over all the nodes and print all the values in one line
-        """
         output = ""
-        node = self.head
-        while node:
-            value = str(node.value)
-            if node._next == None:
-                output = output + '{ ' + value + ' } -> None'
-                break
+        pointer = self.head
+        while pointer:
+            if pointer._next is None:
+                output += "{ " + f"{str(pointer.value)}" + " }" + " -> None"
+
             else:
-                node = node._next
-                output = output + '{ ' + value + ' } -> '
+                output += "{ " + f"{str(pointer.value)}" + " }" + " -> "
+            pointer = pointer._next
         return output
+
+    def append(self, value='None'):
+        """
+        Add a node to the end of the linked list
+        """
+        node = Node(value)
+        if not self.head:
+            self.head = node
+        else:
+            pointer = self.head
+            while pointer._next is not None:
+                pointer = pointer._next
+            pointer._next = node
+
+    def insert_before(self, value, new_value):
+        """
+        adds a new node with the given new value immediately before the first node that has the value specified.
+        """
+        pointer = self.head
+        if pointer.value == value:
+            self._next = pointer
+            self.head = new_value
+        else:
+            while pointer:
+                if pointer._next.value == value:
+                    next_value = pointer._next
+                    pointer._next = Node(new_value)
+                    pointer._next._next = next_value
+                    break
+                pointer = pointer._next
+
+    def insert_after(self, value, new_value):
+        """
+        Adds a new node with new value passed after the first node which has the value specified.
+        """
+        pointer = self.head
+        while pointer:
+            if pointer.value == value:
+                next_value = pointer._next
+                pointer._next = Node(new_value)
+                pointer._next._next = next_value
+                break
+            pointer = pointer._next
+
+    def export_as_List(self):
+        """
+        this function export the singly list as list
+        to be zipped
+        """
+        array = []
+        currentNode = self.head
+        while(currentNode is not None):
+            array[:0] = [currentNode.value]
+            currentNode = currentNode._next
+        return array
+
+    def get_k_th(self, k):
+        """
+        this function return the kth value of list
+
+        Arg:
+        k : The nth of the list we need to return and it k is positive integer less
+        than the length of linked list
+
+        Return:
+        value at kth of linked list
+        """
+        pointer = self.head
+        count = 0
+        while (pointer):
+            if (count == k):
+                return pointer.value
+            count += 1
+            pointer = pointer._next
+        if k == count:
+            return "The Length of array and the k you passed are same"
+        elif k > count:
+            return "You are not allowed to enter a number is greater than length of list"
+        elif k < 0:
+            return "You are not allowed to enter negative number"
+        else:
+            return 0
 
 
 if __name__ == "__main__":
 
     ll = LinkedList()
-    ll.add(1)
-    ll.add(2)
-    ll.add(3)
-    ll.display()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+
+    print(ll.getNth(2))
+    print(ll.__str__())

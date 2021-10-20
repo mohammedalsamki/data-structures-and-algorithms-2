@@ -1,4 +1,4 @@
-# Reverse an Array
+# Linked List
 
 <!-- Description of the challenge -->
 
@@ -11,13 +11,17 @@ using Node Class
 
 ## Linked List
 
-- [x] Create a Linked List class
-- [x] Within your Linked List class, include a head property.
-- [x] The class should contain the following methods
+* [x] Create a Linked List class
+* [x] Within your Linked List class, include a head property.
+* [x] The class should contain the following methods
 
     - [x] insert
     - [x] includes
     - [x] to string
+    - [x] append
+    - [x] insert before
+    - [x] insert after
+    - [x] get the k-th
 
 ## Test Requirements
 
@@ -28,3 +32,14 @@ The head property will properly point to the first node in the linked list
 * [x] Will return true when finding a value within the linked list that exists
 * [x] Will return false when searching for a value in the linked list that does not exist
 * [x] Can properly return a collection of all the values that exist in the linked list
+# White Board
+
+![first](1.png)
+
+</br>
+
+![second](2.png)
+
+</br>
+
+![third](3.png)
