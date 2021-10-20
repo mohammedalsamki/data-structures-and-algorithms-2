@@ -16,23 +16,27 @@ def zip_list(Linked_List_1,Linked_List_2):
         Zipped Linked List
 
         """
-        ll_1=Linked_List_1.export_as_List()
-        ll_2=Linked_List_2.export_as_List()
+        ll_1 = Linked_List_1.head
+        ll_2 = Linked_List_2.head
 
-        zipped_Object=zip(ll_1,ll_2)
-        lista=list(zipped_Object)
+        if not ll_1 and not ll_2:
+            return "there is no lists passed"
+        elif not ll_1 or not ll_2  :
+            return "one of lists is missing"
 
-        output = ""
-        for item in lista:
-            output +=  "{ " + f"{item[0]}" + " }" + " -> " + "{ " + f"{item[1]}" + " }" + " -> "
-        with_head= "head" + " -> " + output
-        with_tail="X"
-        result= with_head + with_tail
-        if len(result)>9:
-            return result
-        else :
-         return "You have entered empty lists and non empty lists are allowed only"
+        temp =''
+        while ll_1 and ll_2:
+            if ll_2:
+                temp = ll_1._next
+                ll_1._next =ll_2
+                ll_1=temp
 
+            if ll_1 and ll_2:
+                temp = ll_2._next
+                ll_2._next=ll_1
+                ll_2=temp
+
+        return str(Linked_List_1)
 
 if __name__=="__main__":
 
@@ -46,5 +50,8 @@ if __name__=="__main__":
     Linked_List_2.add(9)
     Linked_List_2.add(4)
 
-
     print(zip_list(Linked_List_1,Linked_List_2))
+
+
+
+
