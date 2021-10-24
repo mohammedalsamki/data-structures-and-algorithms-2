@@ -1,3 +1,5 @@
+from typing import Text
+
 
 class Node:
     """

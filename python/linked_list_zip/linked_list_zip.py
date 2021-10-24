@@ -1,6 +1,4 @@
-import sys
-sys.path.append('/media/jehadabuawwad/EA20F40B20F3DC8F/data-structures-and-algorithms/python')
-from linked_list.linked_list import Node, LinkedList
+from linked_list import Node, LinkedList
 
 def zip_list(Linked_List_1,Linked_List_2):
         """

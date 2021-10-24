@@ -1,5 +1,5 @@
-from linked_list_zip.linked_list_zip import *
-from linked_list.linked_list import Node, LinkedList
+from linked_list_zip import *
+from linked_list import Node, LinkedList
 
 import pytest
 
