@@ -1,8 +1,3 @@
-
-import sys
-sys.path.append('/media/jehadabuawwad/EA20F40B20F3DC8F/OneDrive - Balqa Applied University/Software/Web/Course - Code 401/Repo/data-structures_and_algorithms/python/linked_list_zip/')
-print(sys.path)
-
 from linked_list_zip import *
 from linked_list import Node, LinkedList
 
