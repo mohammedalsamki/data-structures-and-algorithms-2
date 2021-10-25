@@ -1,9 +1,11 @@
 from stack_and_queue.stack_and_queue import Queue
 
-class AnimalShelter:
+class AnimalShelter(Queue):
     def __init__(self):
         self.dogs= Queue()
         self.cats= Queue()
+        self.front=self.cats.front
+        self.rear=self.cats.rear
 
     def add_animal(self,name,type):
         """

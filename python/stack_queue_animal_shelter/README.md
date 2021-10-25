@@ -24,8 +24,8 @@ Implement First-in, First out Animal Shelter.
 
 ## Test Requirements
     - [] Can successfully enqueue into a queue
-    - [] Can successfully enqueue multiple values into a queue
-    - [] Can successfully dequeue out of a queue the expected value
+    - [] Returns that the Dequee is empty if we add then adopt
+    - [] Returns a masseg if the animal type passed is not dog or cat
 # White Board
 
 ![Shelter]()
