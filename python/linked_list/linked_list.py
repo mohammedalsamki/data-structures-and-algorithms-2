@@ -118,19 +118,7 @@ class LinkedList:
                 pointer._next._next = next_value
                 break
             pointer = pointer._next
-
-    def export_as_List(self):
-        """
-        this function export the singly list as list
-        to be zipped
-        """
-        array = []
-        currentNode = self.head
-        while(currentNode is not None):
-            array[:0] = [currentNode.value]
-            currentNode = currentNode._next
-        return array
-
+            
     def get_k_th(self, k):
         """
         this function return the kth value of list
