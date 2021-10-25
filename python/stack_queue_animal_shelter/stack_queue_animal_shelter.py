@@ -1,11 +1,11 @@
 from stack_and_queue.stack_and_queue import Queue
 
-class AnimalShelter(Queue):
+class AnimalShelter():
     def __init__(self):
         self.dogs= Queue()
         self.cats= Queue()
-        self.front=self.cats.front
-        self.rear=self.cats.rear
+        self.front={}
+        self.rear={}
 
     def add_animal(self,name,type):
         """
@@ -22,8 +22,10 @@ class AnimalShelter(Queue):
         }
         if type=="cat":
             self.cats.enqueue(animal)
+            self.rear=self.cats.rear
         elif type=="dog":
             self.dogs.enqueue(animal)
+            self.rear=self.dogs.rear
         else:
             print("Invalid animal type entered. Animals must be cat or dog.")
     def adopt_animal(self,pref):
@@ -35,9 +37,14 @@ class AnimalShelter(Queue):
         Return: None if the passed pref is not dog or cat
         """
         if pref == 'dog':
-            return self.dogs.dequeue()
+            target=self.dogs.dequeue()
+            self.front=self.dogs.front
+            return target
+
         elif pref =='cat':
-            return self.cats.dequeue()
+            target=self.dogs.dequeue()
+            self.front=self.cats.front
+            return target
         else:
             return None
 
