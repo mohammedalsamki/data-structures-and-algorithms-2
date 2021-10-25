@@ -1,8 +1,8 @@
 import pytest
 
-from stack_and_queue import Node
-from stack_and_queue import Stack
-from stack_queue_pseudo import PseudoQueue
+from stack_and_queue.stack_and_queue import Node
+from stack_and_queue.stack_and_queue import Stack
+from stack_queue_pseudo.stack_queue_pseudo import PseudoQueue
 
 
 def test_Queue_enqueue(enqueue):

@@ -1,8 +1,8 @@
 import pytest
 
-from stack_and_queue import Node
-from stack_and_queue import Stack
-from stack_and_queue import Queue
+from stack_and_queue.stack_and_queue import Node
+from stack_and_queue.stack_and_queue import Stack
+from stack_and_queue.stack_and_queue import Queue
 
 def test_stack_push(stack):
     actual = stack.top.value

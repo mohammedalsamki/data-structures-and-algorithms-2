@@ -1,4 +1,4 @@
-from array_insert_shift import insertShiftArray
+from array_insert_shift.array_insert_shift import insertShiftArray
 
 
 def test_array_insert():
