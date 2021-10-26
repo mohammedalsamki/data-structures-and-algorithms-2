@@ -82,7 +82,7 @@ class Queue(Node):
         Return: value beign removed with any type
         """
         if self.front == None:
-            raise Exception("This stack is empty")
+            raise Exception("This Queee is empty")
         temp = self.front
         self.front = self.front.next
         temp.next = None
