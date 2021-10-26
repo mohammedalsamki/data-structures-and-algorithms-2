@@ -9,7 +9,7 @@ Multi-bracket Validation.
 ## Requirements
 
 * []    Write a function called validate brackets
-* [] Arguments: string
+* [x] Arguments: string
 * [] Return: boolean
     - [] representing whether or not the brackets in the string are balanced
     There are 3 types of brackets:
