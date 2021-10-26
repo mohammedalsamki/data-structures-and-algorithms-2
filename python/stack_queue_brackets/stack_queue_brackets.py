@@ -1,8 +1,14 @@
 from stack_and_queue.stack_and_queue import Stack
 
 def validate_brackets(text):
+  """
+    Method representing whether or not the brackets in the string are balanced
+
+    Arg: text is string to be validated
+    Return : Boolean if the string is balanced
+  """
+
   stack = Stack()
-  temp=[]
   for paren in text:
 
     if paren == '(' or paren == '[' or paren == '{':
