@@ -1,10 +1,10 @@
-# Stack Queue Animal Shelter
+# Multi-bracket Validation
 
-Implement First-in, First out Animal Shelter.
+Multi-bracket Validation.
 
 ## Approach & Efficiency
 
-* bigo(1) for dequeue or enqueue
+
 
 ## Requirements
 
@@ -20,10 +20,9 @@ Implement First-in, First out Animal Shelter.
     - Curly Brackets : {}
 
 ## Test Requirements
-
-    - [x] Can successfully enqueue into a queue
-    - [x] Returns that the Dequee is empty if we add then adopt
-    - [x] Returns a masseg if the animal type passed is not dog or cat
+    - []
+    - []
+    - []
 # White Board
 
-![Shelter](animal_shelter.jpg)
+![]()
