@@ -14,12 +14,12 @@ Implement Binary Tree and BST
 
 2. Binary Tree
 
-* [] Create a Binary Tree class
-    - [] Define a method for each of the depth first traversals:
-        * [] pre order
-        * [] in order
-        * [] post order which returns an array of the values, ordered appropriately.
-* [] Any exceptions or errors that come from your code should be semantic, capture-able errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
+* [x] Create a Binary Tree class
+    - [x] Define a method for each of the depth first traversals:
+        * [x] pre order
+        * [x] in order
+        * [x] post order which returns an array of the values, ordered appropriately.
+* [x] Any exceptions or errors that come from your code should be semantic, capture-able errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
 
 3. Binary Search Tree
 
