@@ -2,7 +2,7 @@
 Binary Tree Tests
 """
 
-from trees.tree import BinaryTree, Node
+from trees.tree import BinaryTree, Node, BinarySearchTree
 import pytest
 
 
@@ -25,6 +25,38 @@ def test_in_order(tree_builder):
     expected = ["D", "B", "A", "C"]
     actual = tree_builder.in_order()
     assert actual == expected
+
+def test_bst_root_addition():
+    bst = BinarySearchTree()
+    bst.add("X")
+    expected = "X"
+    actual = bst.root.value
+    assert actual == expected
+
+
+def test_bst_mulitple_values_addition(addition):
+    assert addition.root.value == 22
+    assert addition.root.right.value == 55
+    assert addition.root.left.value == 10
+
+
+def test_bst_four_values_addition(addition):
+    assert addition.root.value == 22
+    assert addition.root.right.value == 55
+    assert addition.root.left.value == 10
+    assert addition.root.left.right.value == 11
+
+
+
+
+@pytest.fixture
+def addition():
+    bfs = BinarySearchTree()
+    bfs.add(22)
+    bfs.add(10)
+    bfs.add(55)
+    bfs.add(11)
+    return bfs
 
 @pytest.fixture
 def tree_builder():

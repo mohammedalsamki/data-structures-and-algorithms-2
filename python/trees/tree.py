@@ -27,7 +27,7 @@ class BinaryTree:
 
     """
 
-    def __init_(self):
+    def __init__(self,root=None):
         self.root = None
 
     def bfs(self):
@@ -120,27 +120,6 @@ class BinaryTree:
         traverse(self.root)
         return list_of_items
 
-
-class BinarySearchTree(BinaryTree):
-    def __init__(self):
-        pass
-
-    def add(self, value):
-        """
-        Method Adds a new node with that value in the correct location in the binary
-        Arguments: value
-        Return: nothing
-        """
-        pass
-
-    def contains(self, value):
-        """
-        Argument: value
-        Returns: boolean indicating whether or not the value is in the tree at least once.
-        """
-        pass
-
-
 class BinarySearchTree(BinaryTree):
     """
     A binary tree Serach Class
@@ -158,13 +137,13 @@ class BinarySearchTree(BinaryTree):
         else:
             current = self.root
             while current:
-                if current.value > value:  # Got to left
-                    if current.left == None:  # if current is a leaf
+                if current.value > value:
+                    if current.left == None:
                         current.left = Node(value)
                         break
                     current = current.left
                 elif current.value < value:
-                    if current.right == None:  # if current is a leaf
+                    if current.right == None:
                         current.right = Node(value)
                         break
                     current = current.right
