@@ -43,4 +43,8 @@ Implement Binary Tree and BST
 * [x] Can successfully return a collection from a postorder traversal
 # White Board
 
-![Trees](trees.jpg)
+![Trees_1](Binary_Trees_1.jpg)
+
+![Trees_2](Binary_Trees_2.jpg)
+
+![Trees_2](Binary_Trees_3.jpg)
