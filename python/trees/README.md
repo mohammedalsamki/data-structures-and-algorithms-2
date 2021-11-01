@@ -20,6 +20,7 @@ Implement Binary Tree and BST
         * [x] in order
         * [x] post order which returns an array of the values, ordered
         appropriately.
+        * [x] breadth first which returns list of all values in the tree, in the order they were encountered
 
         * [x] find maximum returns the maximum value of tree
 * [x] Any exceptions or errors that come from your code should be semantic, capture-able errors. For example, rather than a default error thrown by your language, your code should raise/throw a custom, semantic error that describes what went wrong in calling the methods you wrote for this lab.
