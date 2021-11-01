@@ -5,9 +5,9 @@ Binary Tree Tests
 from trees.tree import BinaryTree, Node, BinarySearchTree
 import pytest
 
-def test_bfs(tree_builder):
+def test_breadth_first(tree_builder):
     expected = ["A", "B", "C", "D"]
-    actual = tree_builder.bfs()
+    actual = tree_builder.breadth_first()
     assert actual == expected
 
 def test_pre_order(tree_builder):
@@ -50,12 +50,12 @@ def test_bst_find_Max(build_tree_for_max):
 
 @pytest.fixture
 def addition():
-    bfs = BinarySearchTree()
-    bfs.add(22)
-    bfs.add(10)
-    bfs.add(55)
-    bfs.add(11)
-    return bfs
+    breadth_first = BinarySearchTree()
+    breadth_first.add(22)
+    breadth_first.add(10)
+    breadth_first.add(55)
+    breadth_first.add(11)
+    return breadth_first
 
 @pytest.fixture
 def tree_builder():
