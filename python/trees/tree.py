@@ -2,7 +2,7 @@ class Node:
     """
     Node Class with add child method
     """
-    def __init__(self, data, left=None, right=None,perant=Non):
+    def __init__(self, data, left=None, right=None,perant=None):
         self.value = data
         self.left = left
         self.right = right
