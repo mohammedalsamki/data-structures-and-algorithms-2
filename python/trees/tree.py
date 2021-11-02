@@ -1,10 +1,16 @@
 class Node:
-    def __init__(self, data, left=None, right=None):
+    """
+    Node Class with add child method
+    """
+    def __init__(self, data, left=None, right=None,perant=Non):
         self.value = data
         self.left = left
         self.right = right
-
-
+        self.perant=perant
+        self.children=[]
+    def add_child(self,child):
+        self.perant=self
+        self.children.append(child)
 class Queue:
     def __init__(self, collection=[]):
         self.data = collection
@@ -19,8 +25,6 @@ class Queue:
 
     def dequeue(self):
         return self.data.pop(0)
-
-
 class BinaryTree:
     """
     A binary tree Class
@@ -137,8 +141,34 @@ class BinaryTree:
         if right_node > max:
             max = right_node
         return max
+class kArrayTree:
+    """
+    K ary binary tree Class
 
+    """
+    def __init__(self, root=None):
+        self.root = root
 
+    def breadth_first(self):
+        """
+        Argument: None
+        Return: tree items
+        """
+        try:
+            node=self.root
+            breadth =Queue()
+            x=[node.perant.value]
+            breadth.enqueue(self.root)
+            while breadth.peek():
+                front=breadth.dequeue()
+                print(front.value)
+                for child in node.children:
+                    breadth.enqueue(child)
+                    x+=[child.value]
+                return x
+        except:
+            print("Your Input Is not a tree")
+            return None
 class BinarySearchTree(BinaryTree):
     """
     A binary tree Serach Class
