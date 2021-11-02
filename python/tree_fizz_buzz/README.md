@@ -26,4 +26,5 @@ Conducting “FizzBuzz” on a k-ary tree while traversing through it to create 
 
 # White Board
 
-![tree fizz buzz](tree_fizz_buzz.jpg)
+![tree fizz buzz](tree_fizz_buzz_1.jpg)
+![tree fizz buzz](tree_fizz_buzz_2.jpg)
