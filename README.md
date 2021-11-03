@@ -35,3 +35,4 @@ To run your tests
 | 8.  | [Stack Queue Animal Shelter](python/stack_queue_animal_shelter/README.md)  |
 | 9.  | [Stack Queue Brackets Validator](python/stack_queue_brackets/README.md)  |
 | 9.  | [Trees](python/trees/README.md)  |
+| 10. | [Trees Fizz Buzz](python/tree_fizz_buzz/README.md)  |
