@@ -12,3 +12,5 @@ It's a python function takes an array and return reversed sorted array
 
 ## Approach & Efficiency
 
+Time : O(N^2)
+Space : O(N)
