@@ -24,14 +24,14 @@ Because of sclicing reduce the the time complixity 50 times than the normal way 
 
 ## Requirements
 
-* [] Write unit tests
+* [x] Write unit tests
 
 ## Test Requirements
 
-* [] Test The method by these samples:
-    - [] Reverse-sorted: [20, 18, 12, 8, 5, -2]
-    - [] Few uniques: [5, 12, 7, 5, 5, 7]
-    - [] Nearly-sorted: [2, 3, 5, 7, 13, 11]
+* [x] Test The method by these samples:
+    - [x] Reverse-sorted: [20, 18, 12, 8, 5, -2]
+    - [x] Few uniques: [5, 12, 7, 5, 5, 7]
+    - [x] Nearly-sorted: [2, 3, 5, 7, 13, 11]
 # White Board
 
 ![Merg_Sort](/python/merge_sort/merge_sort.png)
