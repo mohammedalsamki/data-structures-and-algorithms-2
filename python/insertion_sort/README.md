@@ -9,9 +9,12 @@ It's a python function takes an array and return reversed sorted array
 <!-- What approach did you take? Discuss Why. What is the Big O space/time for this approach? -->
 
 Time : O(N^2)
+
 Space : O(N)
 
-### Implementation
+## Blog : [Link](BLOG.md)
+
+## Implementation
 
 * [x] Provide a visual step through for each of the sample arrays based on the provided pseudo code
 * [x] Convert the pseudo-code into working code in your language
