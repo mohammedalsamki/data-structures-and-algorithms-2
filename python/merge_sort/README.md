@@ -2,7 +2,7 @@
 
 <!-- Description of the challenge -->
 
-A method takes an array as arugment and depending on scliceing and midpoint it
+A method takes an array as arugment and depending on slicing and midpoint it
 will return a sorted array.
 
 ## Approach & Efficiency
