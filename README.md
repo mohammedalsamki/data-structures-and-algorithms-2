@@ -36,4 +36,4 @@ To run your tests
 | 9.  | [Stack Queue Brackets Validator](python/stack_queue_brackets/README.md)  |
 | 9.  | [Trees](python/trees/README.md)  |
 | 10. | [Trees Fizz Buzz](python/tree_fizz_buzz/README.md)  |
-| 11. | [Insertion Sort](python/insertion_sort/BLOG.md)  |
+| 11. | [Insertion Sort](python/insertion_sort/README.md)  |
