@@ -35,3 +35,7 @@ Because of sclicing reduce the the time complixity 50 times than the normal way 
 # White Board
 
 ![Merg_Sort](/python/merge_sort/merge_sort.png)
+
+## Collaboration
+
+I collabrated with **Faisal Kushha** in Miro and code translating
