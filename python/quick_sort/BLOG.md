@@ -1,4 +1,4 @@
-![Quick_Sort](tracing.png)
+![Quick_Sort](tracing.jpg)
 
 
 ## Back to README File [Link](README.md)

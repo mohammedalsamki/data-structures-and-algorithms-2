@@ -1,4 +1,5 @@
 def quick_sort(left, right, arr):
+
     if (left < right):
         p = partition(left, right, arr)
         quick_sort(left, p - 1, arr)
@@ -18,4 +19,6 @@ def swap(arr,i,low,):
     temp=arr[i]
     arr[i]=arr[low]
     arr[low]=temp
+
+
 
