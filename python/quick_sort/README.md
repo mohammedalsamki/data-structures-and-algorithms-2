@@ -32,5 +32,5 @@ Space :
     - [] Nearly-sorted: [2, 3, 5, 7, 13, 11]
 # White Board
 
-![Quick_Sort](/python/merge_sort/merge_sort.png)
+![Quick_Sort](/python/quick_sort/quick_sort.jpg)
 
