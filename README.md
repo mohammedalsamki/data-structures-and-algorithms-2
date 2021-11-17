@@ -38,3 +38,4 @@ To run your tests
 | 10. | [Trees Fizz Buzz](python/tree_fizz_buzz/README.md)  |
 | 11. | [Insertion Sort](python/insertion_sort/README.md)  |
 | 12. | [Merge Sort](python/merge_sort/README.md)  |
+| 13. | [Quick Sort](python/quick_sort/README.md)  |
