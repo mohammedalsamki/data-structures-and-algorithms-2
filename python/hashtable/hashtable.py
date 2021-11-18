@@ -93,4 +93,4 @@ class HashTable:
         if key in temp:
             return True
         else:
-            return False
+            return None
