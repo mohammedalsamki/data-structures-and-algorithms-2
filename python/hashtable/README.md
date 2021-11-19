@@ -41,4 +41,4 @@ Hash maps take advantage of an array’s O(1) read access. Instead of adding ele
 
 ## White Board
 
-![Hash]()
+![Hash](Hashtable.jpg)
