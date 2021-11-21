@@ -120,10 +120,7 @@ def repeated_word(text):
             if table.contain(word):
                 return f"The word is: {word}"
             table.add(word, '.')
-        print(table._HashTable__buckets)
     except UnAcceptedValueError as e:
-        print ("Received error:", e.data)
+        return("Received error:",e.data)
     return "No words being catched"
-
-print(repeated_word("String provided contains an invalid number of keys."))
 
