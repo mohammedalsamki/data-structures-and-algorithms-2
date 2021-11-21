@@ -84,13 +84,15 @@ class HashTable:
         Arg: key str
         Return : Boolean
         """
-        buckets = self.__buckets
-        temp=[]
-        for obj in buckets:
-            if obj!=None:
-                temp+=[obj.head.value[0]]
 
-        if key in temp:
+        index = self.__hash(key)
+        hashed = self.__buckets[index]
+        if hashed:
+            current = hashed.head
+            while current:
+                if current.value[0] == key:
+                    return True
+                current = current.next
             return True
-        else:
-            return None
+        return None
+
