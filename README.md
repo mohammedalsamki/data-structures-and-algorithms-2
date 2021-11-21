@@ -39,3 +39,5 @@ To run your tests
 | 11. | [Insertion Sort](python/insertion_sort/README.md)  |
 | 12. | [Merge Sort](python/merge_sort/README.md)  |
 | 13. | [Quick Sort](python/quick_sort/README.md)  |
+| 14. | [Hash Map](python/hashtable/README.md)  |
+| 15. | [Hash Map Repeted Word](python/hashmap_repeated_word/README.md)  |

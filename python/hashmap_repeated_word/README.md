@@ -18,7 +18,7 @@ Space : O(1)
 
 ## Requirements
 
-* [] Write unit tests
+* [x] Write unit tests
 # White Board
 
 ![Hash Map repeted words](whiteboard.jpg)
