@@ -111,10 +111,10 @@ def repeated_word(text):
     Args : text as string type
     Returns : word as string type
     """
-    table = HashTable(32)
+    table = HashTable()
     try:
-        words = text.split(' ')
-        if(words[0]==''):
+        words = list(map(lambda word : word.lower(), re.findall(r"\w+", text)))
+        if(len(words)==0):
             raise UnAcceptedValueError("String Being passed is empty")
         for word in words:
             if table.contain(word):
@@ -122,5 +122,5 @@ def repeated_word(text):
             table.add(word, '.')
     except UnAcceptedValueError as e:
         return("Received error:",e.data)
-    return "No words being catched"
 
+    else: return "No words being catched"
