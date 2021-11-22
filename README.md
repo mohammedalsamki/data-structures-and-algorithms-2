@@ -41,3 +41,5 @@ To run your tests
 | 13. | [Quick Sort](python/quick_sort/README.md)  |
 | 14. | [Hash Map](python/hashtable/README.md)  |
 | 15. | [Hash Map Repeted Word](python/hashmap_repeated_word/README.md)  |
+| 16. | [Tree Intersection](python/tree_intersection/README.md)  |
+
