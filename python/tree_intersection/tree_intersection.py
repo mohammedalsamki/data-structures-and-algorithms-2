@@ -1,5 +1,5 @@
 
-from dependices import  *
+from tree_intersection.dependices import  *
 def tree_intersection(tree_a, tree_b):
     intersections = []
     table = Hashtable()
