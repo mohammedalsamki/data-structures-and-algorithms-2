@@ -100,7 +100,7 @@ class LinkedList:
 
 class Hashtable:
 
-    def __init__(self, size = 1024):
+    def __init__(self, size = 16):
         self.__size = size
         self.__buckets = [None for _ in range(size)]
 

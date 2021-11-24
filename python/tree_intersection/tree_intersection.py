@@ -11,4 +11,3 @@ def tree_intersection(tree_a, tree_b):
         if table.contains(str(b_value)):
             intersections.append(b_value)
     return None if not len(tuple(list(intersections))) else tuple(list(intersections))
-
