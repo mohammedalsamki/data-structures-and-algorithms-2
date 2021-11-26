@@ -103,9 +103,16 @@ class Graph:
             raise KeyError("Start Vertex not found in graph")
 
         if end_vertex not in self.__adjacency_list:
-            raise("End Vertex not found in graph")
-        edge=Edge(end_vertex)
+            raise KeyError("End Vertex not found in graph")
+        edge=Edge(end_vertex,weight)
         self.__adjacency_list[start_vertex].append(edge)
+    def size(self):
+        """
+        Method to size of Graph
+        Arguments: None
+        return: length of adjeancy list
+        """
+        return len(self.__adjacency_list)
 
     def get_nodes(self):
         """
