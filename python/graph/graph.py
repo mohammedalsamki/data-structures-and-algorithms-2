@@ -110,7 +110,7 @@ class Graph:
         """
         Method to size of Graph
         Arguments: None
-        return: length of adjeancy list
+        return: length of adjeancy
         """
         return len(self.__adjacency_list)
 

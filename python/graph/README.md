@@ -45,4 +45,5 @@ Write tests to prove the following functionality:
 
 # White Board
 
-![Graphs](whiteboard.jpg)
+![Graphs](graph_1.jpg)
+![Graphs](graph_2.jpg)
