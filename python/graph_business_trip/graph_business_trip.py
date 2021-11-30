@@ -7,8 +7,8 @@ def business_trip(graph,trip):
     for i in range(len(trip)):
         for city in graph.get_neighbors(trip[0]):
             m[city.vertex.value]=f'{city.weight}'
-    if len(m)!=0:
-        cost=m.get(trip[1].value)
+    cost=m.get(trip[1].value)
+    if cost is not None:
         return f'There is a Road from {trip[0].value} to {trip[1].value} and it will cost {cost}$'
     else :
         return f'There is No Road'
