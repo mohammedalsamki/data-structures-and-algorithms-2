@@ -102,6 +102,13 @@ class Graph:
         self.__adjacency_list[v] = []
         return v
 
+    def get_node(self,value):
+        nodes=[]
+        for node in list(self.get_nodes()):
+            nodes+=[node.value]
+            if value in nodes:
+                return node
+
     def size(self):
         """
         Get the number of vertices in a graph.

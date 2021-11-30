@@ -1,14 +1,14 @@
 from graph.graph import *
 
 
-def business_trip(graph,trip):
-    cost=0
-    m={}
-    for i in range(len(trip)):
-        for city in graph.get_neighbors(trip[0]):
-            m[city.vertex.value]=f'{city.weight}'
-    cost=m.get(trip[1].value)
-    if cost is not None:
-        return f'There is a Road from {trip[0].value} to {trip[1].value} and it will cost {cost}$'
-    else :
-        return f'There is No Road'
+def business_trip(graph,cities_list):
+    if len(cities_list) > 1:
+        if not (cities_list[0] in [vertex.value for vertex in graph.get_nodes()]) or  not ( cities_list[1] in [vertex.value for vertex in graph.get_nodes()]):
+            return ('NO City')
+    vertex_node=graph.get_node(cities_list[0])
+    neighbors=graph.get_neighbors(vertex_node)
+    if neighbors:
+        for neighbor in neighbors:
+            if cities_list[1]== neighbor.vertex.value:
+                return (True,f'{neighbor.weight}$')
+    return(False,'0$')
