@@ -8,22 +8,22 @@ Given a business trip itinerary, and an Alaska Airlines route map, is the trip p
 
 ## Approach & Efficiency
 
--   Time :
--   Space :
+-   Time : O(N)
+-   Space : O(1)
 
 ## Feature Tasks
-* [] Write a function called business trip
-    - [] Arguments: graph, array of city names
-    - [] Return: cost or null
+* [x] Write a function called business trip
+    - [x] Arguments: graph, array of city names
+    - [x] Return: cost or null
 
 
 ## Structure and Testing
 
-* [] Write at least three test assertions for each method that you define.
+* [x] Write at least three test assertions for each method that you define.
 
 
 
 # White Board
 
-![Graphs Busniss Trip]()
+![Graphs Busniss Trip](trip.jpg)
 
