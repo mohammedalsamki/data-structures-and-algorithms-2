@@ -45,7 +45,7 @@ class Stack(Node):
         Arg   : No Arguments
         Return: value at the top of stack with any type
         """
-        return self.top.value
+        return self.top
 
     def is_empty(self):
         """
