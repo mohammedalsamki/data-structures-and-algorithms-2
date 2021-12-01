@@ -1,12 +1,12 @@
 def graph_depth_first_search(graph, start_node):
         """
-        Traverse a graph in depth first pre-orderal manner given a starting node.
+        Traverse a graph in depth first pre-order for a given starting node.
 
-        Args:
-            start_node (vertex): Starting vertex or node.
+        Argument:
+            start_node (vertex): starting node
 
         Returns:
-            list: A list of the values of the visited vertices.
+            list: collection of values in preorder
         """
         visited = []
 
