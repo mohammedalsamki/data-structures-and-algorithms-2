@@ -8,13 +8,13 @@ def left_join(table_1, table_2):
         output: a list of values after left join.
     """
     output = []
-    table_1_buckets=table_1._HashTable__buckets
+    table_1_buckets=table_1.buckets
     for item in table_1_buckets:
         if item:
             current = item.head
             while current:
-                hashed = table_1._HashTable__hash(current.value[0])
-                target = table_2._HashTable__buckets[hashed]
+                hashed = table_1.hash(current.value[0])
+                target = table_2.buckets[hashed]
                 if not target:
                     output.append((current.value[0], (current.value[1], None)))
                     current = current.next

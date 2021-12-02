@@ -1,7 +1,7 @@
 
 import pytest
+from hashmap_left_join.dependices import *
 from hashmap_left_join.hash_map_left_join import left_join
-from hashtable.hashtable import HashTable
 
 def test_same_keys():
     """
