@@ -66,6 +66,8 @@ class Stack:
         Pop or get the very last item in a stack.
         """
         self.dq.pop()
+    def peek(self):
+        return self.dq[-1]
 
 class Edge:
     """

@@ -46,5 +46,6 @@ To run your tests
 | 18. | [Graph](python/graph/README.md)  |
 | 19. | [Graph breadth first](python/graph_breadth_first/README.md)  |
 | 20. | [Graph business trip](python/graph_business_trip/README.md)  |
+| 21. | [Graph Depth first](python/graph_depth_first/README.md)  |
 
 
