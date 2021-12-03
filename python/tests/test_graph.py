@@ -55,6 +55,17 @@ def test_get_neighbors():
     assert neighbor_edge.vertex.value == 'banana'
     assert neighbor_edge.weight == 44
 
+def test_get_node():
+    graph = Graph()
+    banana = graph.add_node('banana')
+    apple = graph.add_node('apple')
+    graph.add_edge(apple, banana, 44)
+    value='banana'
+    actual=graph.get_node(value)
+    excepted=banana
+    assert actual==excepted
+
+
 def test_empty_graph():
     graph = Graph()
     expected = 0
