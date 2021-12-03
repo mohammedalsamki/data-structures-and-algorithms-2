@@ -42,4 +42,7 @@ To run your tests
 | 14. | [Hash Map](python/hashtable/README.md)  |
 | 15. | [Hash Map Repeted Word](python/hashmap_repeated_word/README.md)  |
 | 16. | [Tree Intersection](python/tree_intersection/README.md)  |
+| 17. | [Hash Map Left Join](python/hashmap_left_join/README.md)  |
+| 18. | [Graph](python/graph/README.md)  |
+
 
